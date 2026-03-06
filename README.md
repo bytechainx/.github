@@ -1,6 +1,6 @@
 # .github — 组织级配置中心
 
-> ZoneCNH 组织下所有仓库的全局规则、CI/CD 模板和 AI Agent 标准。
+> bytechainx 组织下所有仓库的全局规则、CI/CD 模板和 AI Agent 标准。
 
 ---
 
@@ -85,7 +85,7 @@ name: CI
 on: { push: { branches: [main] }, pull_request: { branches: [main] } }
 jobs:
   ci:
-    uses: ZoneCNH/.github/.github/workflows/reusable-rust-ci.yml@main
+    uses: bytechainx/.github/.github/workflows/reusable-rust-ci.yml@main
 ```
 
 **Python / Node.js** 类似，替换 workflow 名称即可。

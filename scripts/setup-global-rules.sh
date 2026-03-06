@@ -3,7 +3,7 @@
 # 一键配置全局规则到本地开发环境
 #
 # 使用方式：
-#   curl -sSL https://raw.githubusercontent.com/ZoneCNH/.github/main/scripts/setup-global-rules.sh | bash
+#   curl -sSL https://raw.githubusercontent.com/bytechainx/.github/main/scripts/setup-global-rules.sh | bash
 #   或
 #   bash .github/scripts/setup-global-rules.sh
 
@@ -18,7 +18,7 @@ NC='\033[0m'
 
 ORG_CONFIG_DIR="${HOME}/org-config"
 CLAUDE_RULES_DIR="${HOME}/.claude/rules"
-REPO_URL="git@github.com:ZoneCNH/.github.git"
+REPO_URL="git@github.com:bytechainx/.github.git"
 
 echo -e "${BLUE}╔══════════════════════════════════════╗${NC}"
 echo -e "${BLUE}║  全局规则初始化工具 v1.0             ║${NC}"

@@ -14,7 +14,7 @@
 
 ```bash
 # 克隆组织配置仓库
-git clone git@github.com:ZoneCNH/.github.git ~/org-config
+git clone git@github.com:bytechainx/.github.git ~/org-config
 
 # 创建 symlinks
 mkdir -p ~/.claude/rules
@@ -36,7 +36,7 @@ ln -sf ~/org-config/rulesets/agent-context.md ~/.claude/rules/agent-context.md
 
 ```bash
 # 通过 CLI 或 GitHub UI 创建
-gh repo create ZoneCNH/<repo-name> --private --clone
+gh repo create bytechainx/<repo-name> --private --clone
 cd <repo-name>
 ```
 
@@ -56,7 +56,7 @@ on:
     branches: [main]
 jobs:
   ci:
-    uses: ZoneCNH/.github/.github/workflows/reusable-rust-ci.yml@main
+    uses: bytechainx/.github/.github/workflows/reusable-rust-ci.yml@main
 ```
 
 ### Python 项目
@@ -71,7 +71,7 @@ on:
     branches: [main]
 jobs:
   ci:
-    uses: ZoneCNH/.github/.github/workflows/reusable-python-ci.yml@main
+    uses: bytechainx/.github/.github/workflows/reusable-python-ci.yml@main
 ```
 
 ### Node.js 项目
@@ -86,7 +86,7 @@ on:
     branches: [main]
 jobs:
   ci:
-    uses: ZoneCNH/.github/.github/workflows/reusable-node-ci.yml@main
+    uses: bytechainx/.github/.github/workflows/reusable-node-ci.yml@main
 ```
 
 ## Step 3：添加项目级 Agent 配置（可选）

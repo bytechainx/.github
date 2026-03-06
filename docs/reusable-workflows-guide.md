@@ -23,7 +23,7 @@ name: CI
 on: [push, pull_request]
 jobs:
     ci:
-        uses: ZoneCNH/.github/.github/workflows/reusable-rust-ci.yml@main
+        uses: bytechainx/.github/.github/workflows/reusable-rust-ci.yml@main
         with:
             rust-version: "stable" # 可选，默认 stable
             features: "--all-features" # 可选，默认 --all-features
@@ -38,7 +38,7 @@ name: CI
 on: [push, pull_request]
 jobs:
     ci:
-        uses: ZoneCNH/.github/.github/workflows/reusable-python-ci.yml@main
+        uses: bytechainx/.github/.github/workflows/reusable-python-ci.yml@main
         with:
             python-version: "3.12" # 可选，默认 3.12
 ```
@@ -52,7 +52,7 @@ name: CI
 on: [push, pull_request]
 jobs:
     ci:
-        uses: ZoneCNH/.github/.github/workflows/reusable-node-ci.yml@main
+        uses: bytechainx/.github/.github/workflows/reusable-node-ci.yml@main
         with:
             node-version: "20" # 可选，默认 20
 ```
@@ -66,7 +66,7 @@ jobs:
 ```yaml
 jobs:
     deploy:
-        uses: ZoneCNH/.github/.github/workflows/reusable-deploy.yml@main
+        uses: bytechainx/.github/.github/workflows/reusable-deploy.yml@main
         secrets: inherit
 ```
 
@@ -75,7 +75,7 @@ jobs:
 ```yaml
 jobs:
     deploy:
-        uses: ZoneCNH/.github/.github/workflows/reusable-deploy.yml@main
+        uses: bytechainx/.github/.github/workflows/reusable-deploy.yml@main
         secrets:
             DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
 ```
@@ -86,10 +86,10 @@ jobs:
 
 ```yaml
 # 开发环境 — 跟踪最新
-uses: ZoneCNH/.github/.github/workflows/reusable-rust-ci.yml@main
+uses: bytechainx/.github/.github/workflows/reusable-rust-ci.yml@main
 
 # 生产环境 — 锁定版本
-uses: ZoneCNH/.github/.github/workflows/reusable-rust-ci.yml@abc1234
+uses: bytechainx/.github/.github/workflows/reusable-rust-ci.yml@abc1234
 ```
 
 ## 调试

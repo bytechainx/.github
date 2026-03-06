@@ -47,7 +47,7 @@ GitHub `.github` 仓库的文件继承**仅限特定社区文件**（`CONTRIBUTI
 
 ```bash
 # 1. 克隆 .github 仓库（仅首次）
-git clone git@github.com:ZoneCNH/.github.git ~/org-config
+git clone git@github.com:bytechainx/.github.git ~/org-config
 
 # 2. 创建 symlink（一次配置，永久生效）
 mkdir -p ~/.claude/rules
@@ -73,7 +73,7 @@ cd ~/org-config && git pull
 
 ```bash
 # 在每个 repo 中添加 submodule
-git submodule add git@github.com:ZoneCNH/.github.git .shared-rules
+git submodule add git@github.com:bytechainx/.github.git .shared-rules
 
 # CLAUDE.md 中引用
 # 参考 .shared-rules/rulesets/rust/RULES.md 中的 Rust 编码规范
@@ -94,9 +94,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Sync to all repos
         run: |
-          REPOS=$(gh repo list ZoneCNH --json name -q '.[].name')
+          REPOS=$(gh repo list bytechainx --json name -q '.[].name')
           for REPO in $REPOS; do
-            gh api repos/ZoneCNH/$REPO/contents/.claude/rules/rust.md \
+            gh api repos/bytechainx/$REPO/contents/.claude/rules/rust.md \
               --method PUT \
               -f message="sync: 更新全局 Rust 规则" \
               -f content=$(base64 -w 0 rulesets/rust/RULES.md) \
@@ -132,7 +132,7 @@ if [ -d "$ORG_CONFIG_DIR" ]; then
   cd "$ORG_CONFIG_DIR" && git pull
 else
   echo "📥 克隆组织配置..."
-  git clone git@github.com:ZoneCNH/.github.git "$ORG_CONFIG_DIR"
+  git clone git@github.com:bytechainx/.github.git "$ORG_CONFIG_DIR"
 fi
 
 # 2. 创建 symlinks

@@ -18,7 +18,7 @@ pip install ruff mypy pytest
 ### 克隆并设置
 
 ```bash
-git clone git@github.com:ZoneCNH/<repo>.git
+git clone git@github.com:bytechainx/<repo>.git
 cd <repo>
 ```
 
